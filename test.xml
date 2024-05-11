@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="NoonTesting" parallel="tests" thread-count="2" >
+    <test name="test1">
+        <parameter name="browser" value="Chrome" />
+        <classes>
+            <class name="TestUserCanRegisterSuccessfully"/>
+            <class name="TestRegisterWithWrongPasswordFormat"/>
+
+        </classes>
+    </test>
+
+
+
+    <test name="test2">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="TestRegisterWithAlreadyUsedEmail"/>
+
+        </classes>
+    </test>
+
+
+</suite>
